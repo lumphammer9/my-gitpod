@@ -23,9 +23,10 @@ tasks:
   - name: Install Python dependencies
     command: |
       pip install black
+      exit
+  - name: My Gitpod
+    command: |
+      echo Welcome to my gitpod!
+      echo "alias hello='echo hello world'" >> ~/.bashrc
+      source ~/.bashrc
 
-#    env: |
-#      MY_ENV_VAR=123
-#    command: |
-#      echo "alias hello='echo hello world'" >> ~/.bashrc
-#      source ~/.bashrc
