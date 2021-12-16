@@ -25,7 +25,7 @@ tasks:
     init: |
       cp /workspace/my-gitpod/.pylintrc ~/.pylintrc
       exit
-  - name: VSCode settings
+  - name: VSCode workspace (not user or remote) settings
     command: |
       mkdir -p /workspace/my-gitpod/.vscode
       cat <<EOF > /workspace/my-gitpod/.vscode/settings.json
