@@ -27,8 +27,8 @@ tasks:
       exit
   - name: VSCode settings
     command: |
-      mkdir -p $HOME/.vscode
-      cat <<EOF > $HOME/.vscode/settings.json
+      mkdir -p /workspace/my-gitpod/.vscode
+      cat <<EOF > /workspace/my-gitpod/.vscode/settings.json
       {
         "python.defaultInterpreterPath": "python3",
         "python.linting.enabled": true,
