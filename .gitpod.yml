@@ -1,4 +1,3 @@
-
 image:
   file: .gitpod.Dockerfile
 
@@ -20,6 +19,32 @@ github:
     addComment: false
 
 tasks:
+  - name: Pylint settings
+    init: |
+      cp /workspace/my-gitpod/.pylintrc ~/.pylintrc
+      exit
+  - name: VSCode settings
+    init: |
+      mkdir -p "$PWD/.vscode";
+      cat << 'EOF' > "$PWD/.vscode/settings.json"
+      {
+        "python.defaultInterpreterPath": "python3",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "python.linting.pylintArgs": [
+          "--max-line-length=80"
+        ],
+        "[python]": {
+          "editor.insertSpaces": true,
+          "editor.tabSize": 4
+        },
+        "editor.formatOnSave": true,
+        "editor.lineNumbers": "on",
+        "python.formatting.provider": "black",
+        "python.formatting.blackArgs": ["--line-length", "79"],
+      }
+      EOF
+      exit
   - name: Install Python dependencies
     command: |
       pip install black
