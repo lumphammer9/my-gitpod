@@ -2,9 +2,9 @@
 image:
   file: .gitpod.Dockerfile
 
-vscode:
-  extensions:
-    - ms-python.python
+#vscode:
+#  extensions:
+#    - ms-python.python
 
 github:
   prebuilds:
