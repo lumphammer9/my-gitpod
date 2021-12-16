@@ -1,9 +1,11 @@
+
 image:
   file: .gitpod.Dockerfile
 
 vscode:
   extensions:
     - ms-python.python
+    - ms-toolsai.jupyter
 
 github:
   prebuilds:
@@ -25,8 +27,8 @@ tasks:
       exit
   - name: VSCode settings
     init: |
-      mkdir -p "$PWD/.vscode";
-      cat << 'EOF' > "$PWD/.vscode/settings.json"
+      mkdir -p ~/.vscode
+      cat <<EOF > ~/.vscode/settings.json
       {
         "python.defaultInterpreterPath": "python3",
         "python.linting.enabled": true,
@@ -54,4 +56,3 @@ tasks:
       echo Welcome to my gitpod!
       echo "alias hello='echo hello world'" >> ~/.bashrc
       source ~/.bashrc
-
