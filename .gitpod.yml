@@ -2,11 +2,9 @@
 image:
   file: .gitpod.Dockerfile
 
-#vscode:
-#  extensions:
-#    - ms-kubernetes-tools.vscode-kubernetes-tools
-#    - HashiCorp.terraform
-#    - ms-python.python
+vscode:
+  extensions:
+    - ms-python.python
 
 github:
   prebuilds:
@@ -22,11 +20,9 @@ github:
     addComment: false
 
 tasks:
-  - name: Set up environment
-    init: |
-      cat << 'EOF' > ~/my_test
-      blah blah blah
-      EOF
+  - name: Install Python dependencies
+    command: |
+      pip install black
 
 #    env: |
 #      MY_ENV_VAR=123
