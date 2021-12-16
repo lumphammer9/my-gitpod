@@ -43,7 +43,7 @@ tasks:
         "editor.formatOnSave": true,
         "editor.lineNumbers": "on",
         "python.formatting.provider": "black",
-        "python.formatting.blackArgs": ["--line-length", "79"],
+        "python.formatting.blackArgs": ["--line-length", "79"]
       }
       EOF
       exit
