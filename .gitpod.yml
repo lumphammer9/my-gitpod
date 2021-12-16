@@ -23,7 +23,7 @@ github:
 tasks:
   - name: Pylint settings
     init: |
-      cp /workspace/my-gitpod/.pylintrc ~/.pylintrc
+      cp /workspace/my-gitpod/.pylintrc.google_style ~/.pylintrc
       exit
   - name: VSCode workspace (not user or remote) settings
     command: |
