@@ -1,3 +1,4 @@
+
 image:
   file: .gitpod.Dockerfile
 
@@ -6,6 +7,7 @@ vscode:
     - ms-kubernetes-tools.vscode-kubernetes-tools
     - HashiCorp.terraform
     - ms-python.python
+
 github:
   prebuilds:
     # enable for the master/default branch (defaults to true)
@@ -20,7 +22,7 @@ github:
     addComment: false
 
 tasks:
-  - name: Set up environment variables
+  - name: Set up environment
     env: |
       MY_ENV_VAR=123
     command: |
