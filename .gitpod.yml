@@ -2,11 +2,11 @@
 image:
   file: .gitpod.Dockerfile
 
-vscode:
-  extensions:
-    - ms-kubernetes-tools.vscode-kubernetes-tools
-    - HashiCorp.terraform
-    - ms-python.python
+#vscode:
+#  extensions:
+#    - ms-kubernetes-tools.vscode-kubernetes-tools
+#    - HashiCorp.terraform
+#    - ms-python.python
 
 github:
   prebuilds:
@@ -23,9 +23,13 @@ github:
 
 tasks:
   - name: Set up environment
-    env: |
-      MY_ENV_VAR=123
-    command: |
-      echo "alias hello='echo hello world'" >> ~/.bashrc
-      source ~/.bashrc
+    init: |
+      cat << 'EOF' > ~/my_test
+      blah blah blah
+      EOF
 
+#    env: |
+#      MY_ENV_VAR=123
+#    command: |
+#      echo "alias hello='echo hello world'" >> ~/.bashrc
+#      source ~/.bashrc
